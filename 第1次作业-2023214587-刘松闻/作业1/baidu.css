@@ -1,0 +1,102 @@
+.QRcode{
+    width: 10%;
+    height: 10%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 50px;
+}
+
+.QRcode1 {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+a{
+    text-decoration:none;
+    padding-left: 12px;
+}
+
+a:hover{
+    color: #4e71f2;
+}
+
+.main{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.download{
+    margin:auto;
+}
+
+.logo1{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.searchwarp {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+.search {
+    flex: 1;
+    margin-right: 10px;
+    height: 30px;
+    float: center;
+    margin-left: 50px;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #f2f2f2;
+    /* 添加一些间距 */
+}
+
+.button {
+    flex-shrink: 0;
+    height: 35px;
+    width: 100px;
+    float: right;
+    border-radius: 10px;
+    background-color: #4e71f2;
+}
+
+.main{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.footer {
+    font-size: small;
+    font-family: "Microsoft YaHei";
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: gray;
+}
+
+.footer a {
+    color: gray;
+}
+
+.footer a:hover {
+    color: black;
+}

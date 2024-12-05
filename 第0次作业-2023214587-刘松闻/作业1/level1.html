@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pinkbox {
+            height: 100px;
+            width: 120px;
+            background-color: pink;
+        }
+
+        .input {
+            width: 300px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 400px; /* 设置表格宽度 */
+        }
+        th, td {
+            border: 1px solid black; /* 画出表格线 */
+            padding: 8px; /* 添加一些内边距 */
+            text-align: center; /* 单元格内容居中 */
+            height: 40px; /* 设置单元格高度 */
+        }
+        .a{
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>这是我的二级标题</h2>
+    <p>百度一分钟，听人吹牛逼两小时(这是一个p标签)</p>
+    <h3>这是我三级标题</h3>
+    <p>这里有一张照片....</p><br>
+    <img src="https://cn.bing.com/th?id=OHR.GreatOwl_ZH-CN1259534922_UHD.jpg&pid=hp&w=384&h=216&rs=1&c=4">
+    <div class="pinkbox">我是一个宽120px高100px的一个粉色盒子</div>
+    <a href="https://www.baidu.com">点我跳转百度</a>
+    <ul>
+        <li>我</li>
+        <li>是</li>
+        <li>无</li>
+        <li>序</li>
+        <li>表</li>
+    </ul>
+    <input class="input" placeholder="我是一个宽300px但是输入什么都没用的输入框" type="text" name="text">
+    <input type="button"class="button" value="不管怎么按都没用的按钮" name="button">
+    <p>下面表格是一个宽400px，每一行高40px的表格，注意有些元素要居中</p>
+    <table>
+        <tbody>
+            <tr>
+                <td>用户名</td>
+                <td><input type="username"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" class="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"> <input type="submit" value="重置"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <p>下面是我你的自我介绍</p>
+    </div>
+    <div>
+        <p>性别：</p>
+        <input type="radio" name="sex" value="male"><label>男</label>
+        <input type="radio" name="sex"value="female"><label>女</label>
+    </div>
+    <div>
+        <p>爱好：</p>
+        <input type="checkbox" value="打游戏"><label>打游戏</label>
+        <input type="checkbox"value="看电影"><label>看电影</label>
+        <input type="checkbox" value="听音乐"><label>听音乐</label>
+        <input type="checkbox" value="运动"><label>运动</label>
+    </div>
+    <div>
+        <p>目标：</p><input type="text" placeholder="努力学习前端，加油！" class="a">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="baidu.css">
+    <title>百度一下，你就知道</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="topright">
+        <a href="https://news.baidu.com/">新闻</a>
+        <a href="https://www.hao123.com">hao123</a>
+        <a href="https://ditu.baidu.com/">地图</a>
+        <a href="https://haokan.baidu.com/">视频</a>
+        <a href="https://tieba.baidu.com/">贴吧</a>
+        <a href="https://xueshu.baidu.com/">学术</a>
+        <a href="https://passport.baidu.com/">登录</a>
+        <a href="">设置</a>
+        <a href="https://www.baidu.com/more/">更多产品</a>
+    </div>
+
+    <!--主体-->
+    <div class="main">
+        <div class="logo">
+            <img src="img/baidu.png" class="logo1" alt="百度一下">
+        </div>
+        <div class="searchwarp">
+            <input type="text" class="search" placeholder="请输入搜索内容">
+            <input type="button" class="button" value="百度一下">
+
+        </div>
+    </div>
+    <div class="foot">
+        <div class="QRcode">
+            <img src="img/QRcode.png" class="QRcode1" alt="扫一扫下载手机百度">
+            <p style="text-align: center;">下载手机百度APP</p>
+        </div>
+    </div>
+
+    <!--尾部-->
+    <div class="footer">
+        <a>把百度作为首页</a>
+        <a href="https://home.baidu.com/">关于百度</a>
+        <a href="https://ir.baidu.com/">About Baidu</a>
+        <a href="https://tuiguang.baidu.com/oneWeb.html">百度推广</a>
+        <a href="https://help.baidu.com/index2">意见反馈</a>
+        <div>京ICP证030173号 京公网安备11000002000001号</div>
+    </div>
+    <script>
+
+        const searchInput = document.querySelector('.search');
+        const searchButton = document.querySelector('.button');
+
+        const performSearch = () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`;
+            } else {
+                alert('请输入搜索内容！');
+            }
+        };
+
+        searchButton.addEventListener('click', performSearch);
+
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
