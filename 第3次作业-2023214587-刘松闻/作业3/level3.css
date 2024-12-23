@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.box1 {
+    border: 1px solid black;
+    width: 200px;
+    height: 100%;
+    margin: 10px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.box2 {
+    border: 1px solid black;
+    flex-grow: 1;
+    margin: 10px;
+    align-self: center;
+    width: 100px;
+    flex-shrink: 1;
+}
+
+.box3 {
+    border: 1px solid black;
+    flex-shrink: 1;
+    margin: 10px;
+    width: 100px;
+    flex-shrink: 1;
+}
+
+.box4 {
+    border: 1px solid black;
+    flex-shrink: 2;
+    margin: 10px;
+    height: 100%;
+    width: 300px;
+}
