@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    background-color: #42D1AD;
+    border-radius: 4%;
+    border: 5px solid #AEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.socailmeidia {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.socailmeidia a img {
+    width: 36px;
+    height: auto;
+    border: none;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.socailmeidia a {
+    text-decoration: none;
+}
+
+.socailmeidia a:hover img {
+    transform: scale(1.2);
+}
