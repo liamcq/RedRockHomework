@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+
+<body>
+    <div>
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+    <div id="divlist">
+        <input type="checkbox" class="selector" value="内卷">内卷
+        <input type="checkbox" class="selector" value="疯狂内卷">疯狂内卷
+        <input type="checkbox" class="selector" value="拼命内卷">拼命内卷
+        <input type="checkbox" class="selector" value="使劲内卷">使劲内卷
+        <br />
+        <input type="button" id="selectAll" value="全选">
+        <input type="button" id="deselectAll" value="全不选">
+        <input type="button" id="invertSelection" value="反选">
+    </div>
+    <script>
+        let selectAll = document.getElementById("selectAll");
+        let deselectAll = document.getElementById("deselectAll");
+        let invertSelection = document.getElementById("invertSelection");
+        let selector = document.getElementsByClassName("selector");
+        selectAll.onclick = function selectAll() {
+            for (let i = 0; i < selector.length; i++) {
+                selector[i].checked = true;
+            }
+        }
+        deselectAll.onclick = function deselectAll() {
+            for (let i = 0; i < selector.length; i++) {
+                selector[i].checked = false;
+            }
+        }
+        invertSelection.onclick = function invertSelection() {
+            for (let i = 0; i < selector.length; i++) {
+                selector[i].checked = !selector[i].checked;
+            }
+        }
+    </script>
+</body>
+
+</html>

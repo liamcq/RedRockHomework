@@ -5,7 +5,6 @@ let person = {
 console.log(person);
 
 
-
 let person2 = new Object();
 person2.name = "Alex";
 person2.age = 30;
@@ -16,6 +15,5 @@ function Person3(name, age){
     this.name = name;
     this.age = age;
 }
-
 let person3 = new Person3("Bob", 25);
 console.log(person3);

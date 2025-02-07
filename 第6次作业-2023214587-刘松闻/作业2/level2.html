@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论区</title>
+</head>
+
+<body>
+    <div style="text-align:center">
+        <h1>评论区</h1>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <textarea id="commentInput" placeholder="请输入评论内容" style="height: 100;; width: 50%;"></textarea>
+        <input type="button" value="提交" id="submit" style="display: flex;">
+    </div>
+    <div>
+        <h3>评论列表</h3>
+        <ul id="commentList"></ul>
+    </div>
+    <script>
+        let submit = document.getElementById('submit');
+        let commentInput = document.getElementById('commentInput');
+        let commentList = document.getElementById('commentList');
+        submit.onclick = function () {
+            //获取用户输入并验证
+            const commentText = commentInput.value.trim();
+            if (commentText === "") {
+                alert("评论不能为空");
+                return;
+            }
+
+            //创建用户输入
+            const li = document.createElement('li');
+            li.textContent = commentText;
+
+            //创建删除按钮
+            const delBtn = document.createElement('button');
+            delBtn.textContent = "删除";
+            delBtn.onclick = function () {
+                commentList.removeChild(li);
+            }
+
+            //将用户输入和删除按钮添加到li中
+            li.appendChild(delBtn);
+
+            //将评论添加到列表中
+            commentList.appendChild(li);
+
+            //清空输入框
+            commentInput.value = "";
+        }
+    </script>
+</body>
+
+</html>
