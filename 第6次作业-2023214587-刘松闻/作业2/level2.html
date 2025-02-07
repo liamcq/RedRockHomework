@@ -12,7 +12,7 @@
         <h1>评论区</h1>
     </div>
     <div style="display: flex; justify-content: center;">
-        <textarea id="commentInput" placeholder="请输入评论内容" style="height: 100;; width: 50%;"></textarea>
+        <textarea id="commentInput" placeholder="请输入评论内容" style="height: 100px; width: 50%;"></textarea>
         <input type="button" value="提交" id="submit" style="display: flex;">
     </div>
     <div>
@@ -23,34 +23,77 @@
         let submit = document.getElementById('submit');
         let commentInput = document.getElementById('commentInput');
         let commentList = document.getElementById('commentList');
+
         submit.onclick = function () {
-            //获取用户输入并验证
+            // 获取用户输入并验证
             const commentText = commentInput.value.trim();
             if (commentText === "") {
                 alert("评论不能为空");
                 return;
             }
 
-            //创建用户输入
+            // 创建评论项
             const li = document.createElement('li');
             li.textContent = commentText;
 
-            //创建删除按钮
+            // 创建删除按钮
             const delBtn = document.createElement('button');
             delBtn.textContent = "删除";
             delBtn.onclick = function () {
                 commentList.removeChild(li);
-            }
+            };
 
-            //将用户输入和删除按钮添加到li中
+            // 创建回复按钮
+            const replyBtn = document.createElement("button");
+            replyBtn.textContent = "回复";
+            replyBtn.onclick = function () {
+                // 创建回复输入框
+                const replyInput = document.createElement("input");
+                replyInput.type = 'text';
+                replyInput.placeholder = "请输入回复";
+
+                // 创建提交回复按钮
+                const replySubmitBtn = document.createElement("button");
+                replySubmitBtn.textContent = "提交回复";
+
+                replySubmitBtn.onclick = function () {
+                    const replyText = replyInput.value.trim();
+                    if (replyText === "") {
+                        alert("回复不能为空");
+                        return;
+                    }
+
+                    // 创建回复项
+                    const replyLi = document.createElement("li");
+                    replyLi.textContent = `回复：${replyText}`;
+
+                    // 将回复项添加到回复列表中
+                    const replyList = li.querySelector('ul') || document.createElement('ul');
+                    if (!li.querySelector('ul')) {
+                        li.appendChild(replyList); // 如果还没有回复列表，则创建一个
+                    }
+                    replyList.appendChild(replyLi);
+
+                    // 移除输入框和提交按钮
+                    li.removeChild(replyInput);
+                    li.removeChild(replySubmitBtn);
+                };
+
+                // 将输入框和提交按钮添加到评论项中
+                li.appendChild(replyInput);
+                li.appendChild(replySubmitBtn);
+            };
+
+            // 将删除按钮和回复按钮添加到评论项中
             li.appendChild(delBtn);
+            li.appendChild(replyBtn);
 
-            //将评论添加到列表中
+            // 将评论项添加到评论列表中
             commentList.appendChild(li);
 
-            //清空输入框
+            // 清空输入框
             commentInput.value = "";
-        }
+        };
     </script>
 </body>
 
